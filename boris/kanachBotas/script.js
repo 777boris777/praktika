@@ -28,8 +28,30 @@ elem.addEventListener("mouseleave", () => {
 let isActivate = true;
 lists.forEach(element => {
     element.addEventListener("click", () => {
-        element.style.backgroundColor = element.style.backgroundColor == "#A0D727" ? "white" : "green";
-        if(element.style.backgroundColor == "#A0D727"){
+        isActivate = !isActivate;
+        element.style.backgroundColor = element.style.backgroundColor == "#A0D727" ? "#fcfbfc" : "A0D727";
+        if (element.style.backgroundColor == "#A0D727") {
+            element.style.backgroundColor = "#fcfbfc";
+        }
+        if (isActivate) {
+            lists.forEach(naxordElement => {
+                naxordElement.style.backgroundColor = "fcfbfc";
+                if (naxordElement == element) {
+                    // chi ashxatum
+                    console.log("sas");
+                    return 0;
+                }
+            });
+        }
+        console.log(isActivate, !isActivate);
+    });
+});
+
+let shoosColor = document.getElementsByClassName("guyner");
+shoosColor.forEach(element => {
+    element.addEventListener("click", () => {
+        element.style.backgroundColor = element.style.backgroundColor == "#A0D727" ? "A0D727" : "A0D727";
+        if (element.style.backgroundColor == "#A0D727") {
             element.style.backgroundColor
         }
         isActivate = !isActivate;
@@ -40,3 +62,5 @@ lists.forEach(element => {
 let x = 50;
 console.log((x * 100) / window.innerWidth);
 console.log((x * 100) / window.innerHeight);
+
+console.log(a);

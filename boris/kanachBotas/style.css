@@ -2,59 +2,76 @@
 
 html,
 body {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 }
 .main {
-    width: 30vw;
-    height: 50vw;
-    background-color: #222222;
-    margin: auto;
-    position: relative;
+  width: 30vw;
+  height: 40vw;
+  background-color: #222222;
+  margin: auto;
+  position: relative;
 }
 .img {
-    width: 22vw;
-    position: relative;
-    left: 3.6vw;
+  width: 22vw;
+  position: relative;
+  left: 3.6vw;
 }
 .text {
-    font-size: 1.5vw;
-    color: aliceblue;
+  font-size: 1.5vw;
+  color: aliceblue;
 }
 .image {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .info {
-    color: #fff;
-    width: 19vw;
-    position: relative;
-    left: 3.6vw;
-    top: 6vw;
+  color: #fff;
+  width: 19vw;
+  position: relative;
+  margin: auto;
+  top: 4vw;
 }
 .sizes {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1.7vw;
 }
 .sizes li {
-    display: inline-block;
-    padding: 0.7vw 1vw;
-    border: 0.1vw solid;
-    background-color: #fcfbfc;
-    color: #686865;
+  display: inline-block;
+  padding: 0.7vw 1vw;
+  border: 0.1vw solid;
+  color: #686865;
 }
 .sizes li:hover {
-    background-color: #A0D727;
+  background-color: #a0d727;
 }
 .klor {
-    border-radius: 50%;
-    background-color: #9ad928;
-    position: absolute;
+  border-radius: 50%;
+  background-color: #9ad928;
+  position: absolute;
 }
-.guyner{
-    width: 1vw;
-    height: 1vw;
+.guyner {
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 0.2vw solid;
+  border-radius: 50%;
+  margin: 0.3vw;
+}
+.colorChoos {
+  font-size: 1.7vw;
+  margin: 1vw;
+  /* margin-bottom: 0vw; */
+  display: flex;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.submit button{
+  padding: 1vw 2vw;
+  font-size: 1.7vw;
 
 }

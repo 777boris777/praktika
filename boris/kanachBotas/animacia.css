@@ -1,27 +1,27 @@
 .animacia {
     animation-name: ijnel;
     animation-duration: 2s;
-    top: 6vw;
+    top: 3vw;
 }
 .animacia1 {
     animation-name: helnel;
     animation-duration: 2s;
-    top: 20vw;
+    top: 13vw;
 }
 @keyframes ijnel {
     0% {
-        top: 20vw;
+        top: 13vw;
     }
     100% {
-        top: 6vw;
+        top: 3vw;
     }
 }
 @keyframes helnel {
     0% {
-        top: 6vw;
+        top: 3vw;
     }
     100% {
-        top: 20vw;
+        top: 13vw;
     }
 }
 
@@ -41,13 +41,13 @@
         opacity: 0;
     }
     100% {
-        top: 6vw;
+        top: 4vw;
         opacity: 1;
     }
 }
 @keyframes korel {
     0% {
-        top: 6vw;
+        top: 4vw;
         opacity: 1;
     }
     100% {

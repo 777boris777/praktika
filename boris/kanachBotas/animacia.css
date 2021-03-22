@@ -1,0 +1,102 @@
+.animacia {
+    animation-name: ijnel;
+    animation-duration: 2s;
+    top: 6vw;
+}
+.animacia1 {
+    animation-name: helnel;
+    animation-duration: 2s;
+    top: 20vw;
+}
+@keyframes ijnel {
+    0% {
+        top: 20vw;
+    }
+    100% {
+        top: 6vw;
+    }
+}
+@keyframes helnel {
+    0% {
+        top: 6vw;
+    }
+    100% {
+        top: 20vw;
+    }
+}
+
+.hiddenBlock {
+    animation-name: korel;
+    animation-duration: 2s;
+    opacity: 0;
+}
+.blochNoHidden {
+    animation-name: ereval;
+    animation-duration: 2s;
+    opacity: 1;
+}
+@keyframes ereval {
+    0% {
+        top: 20vw;
+        opacity: 0;
+    }
+    100% {
+        top: 6vw;
+        opacity: 1;
+    }
+}
+@keyframes korel {
+    0% {
+        top: 6vw;
+        opacity: 1;
+    }
+    100% {
+        top: 20vw;
+        opacity: 0;
+    }
+}
+
+.poqrKlor {
+    animation-name: poqranal;
+    animation-duration: 2s;
+    width: 35vw;
+    height: 35vw;
+    top: -10vw;
+    left: 8vw;
+}
+.metsKlor {
+    animation-name: metsanal;
+    animation-duration: 2s;
+    width: 55vw;
+    height: 55vw;
+    top: -25vw;
+    left: -2vw;
+}
+@keyframes metsanal {
+    0% {
+        width: 35vw;
+        height: 35vw;
+        top: -10vw;
+        left: 8vw;
+    }
+    100% {
+        width: 55vw;
+        height: 55vw;
+        top: -25vw;
+        left: -2vw;
+    }
+}
+@keyframes poqranal {
+    0% {
+        width: 55vw;
+        height: 55vw;
+        top: -25vw;
+        left: -2vw;
+    }
+    100% {
+        width: 35vw;
+        height: 35vw;
+        top: -10vw;
+        left: 8vw;
+    }
+}

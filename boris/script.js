@@ -1,21 +1,45 @@
-// function a(str) {
-//     let b = "";
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         b += str[i];
-//     }
-//     if (str === b) {
-//         return true;
-//     }
-//     return false;
-// }
+String.prototype.a = function () {
+    let str = this.toString()
+    console.log(str);
+    let b = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        b += str[i];
+    }
+    if (str === b) {
+        return true;
+    }
+    return false;
+}
 
-// a2 = (str) => { return true ? str === str.split("").reverse().join("") : false; }
+const a2 = str => str === str.split("").reverse().join("")
 
-// let tiv = "545";
-// console.log(tiv);
-// console.log(a(tiv));
-// console.log(a2(tiv));
 
+
+let tiv = "546";
+console.log(tiv.a());
+Array.prototype.myMap = function (func) {
+    let arr = []
+    for (let i = 0; i < this.length; i++) {
+        arr = [...arr, func(this[i], i)];
+    }
+    return arr;
+}
+// console.log(arr.myMap(elem => {
+//     return elem+1;
+// }));
+
+let arr = ["1", "2", "3", "45745", "5225512"];
+Array.prototype.myFilter = function (callback) {
+    for (let i = 0; i < this.length; i++) {
+        // console.log(this[i]);
+        // console.log(callback(this[i]));
+        if (callback(this[i])) {
+            return this[i];
+        }
+    }
+}
+
+console.log(arr.myFilter(word => word.length > 6));
 
 
 
@@ -129,9 +153,9 @@
 
 //alert( sayHi());
 
-let user = {
-    name: "boris",
-    age: 17
-};
+// let user = {
+//     name: "boris",
+//     age: 17
+// };
 
-console.log(user);
+// console.log(user);

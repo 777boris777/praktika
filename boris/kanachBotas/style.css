@@ -16,6 +16,9 @@ body {
   width: 22vw;
   position: relative;
   left: 3.6vw;
+  transform: rotate(-20deg);
+
+  /* transform: scaleX(-1); */
 }
 .text {
   font-size: 1.5vw;
@@ -32,7 +35,7 @@ body {
   width: 19vw;
   position: relative;
   margin: auto;
-  top: 4vw;
+  /* top: 20vw; */
 }
 .sizes {
   padding: 0;
@@ -43,6 +46,7 @@ body {
   display: inline-block;
   padding: 0.7vw 1vw;
   border: 0.1vw solid;
+  border-radius: 5px;
   color: #686865;
 }
 .sizes li:hover {
@@ -53,25 +57,4 @@ body {
   background-color: #9ad928;
   position: absolute;
 }
-.guyner {
-  width: 1.5vw;
-  height: 1.5vw;
-  border: 0.2vw solid;
-  border-radius: 50%;
-  margin: 0.3vw;
-}
-.colorChoos {
-  font-size: 1.7vw;
-  margin: 1vw;
-  /* margin-bottom: 0vw; */
-  display: flex;
-}
-.submit {
-  display: flex;
-  justify-content: center;
-}
-.submit button{
-  padding: 1vw 2vw;
-  font-size: 1.7vw;
 
-}

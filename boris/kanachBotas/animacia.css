@@ -1,102 +1,76 @@
 .animacia {
-    animation-name: ijnel;
-    animation-duration: 2s;
-    top: 3vw;
+    transition: 2s;
+    top: 2vw;
 }
 .animacia1 {
-    animation-name: helnel;
-    animation-duration: 2s;
+    transition: 2s;
     top: 13vw;
-}
-@keyframes ijnel {
-    0% {
-        top: 13vw;
-    }
-    100% {
-        top: 3vw;
-    }
-}
-@keyframes helnel {
-    0% {
-        top: 3vw;
-    }
-    100% {
-        top: 13vw;
-    }
 }
 
 .hiddenBlock {
-    animation-name: korel;
-    animation-duration: 2s;
+    transition: 2s;
+    top: 20vw;
     opacity: 0;
 }
 .blochNoHidden {
-    animation-name: ereval;
-    animation-duration: 2s;
+    transition: 2s;
+    top: 4vw;
     opacity: 1;
-}
-@keyframes ereval {
-    0% {
-        top: 20vw;
-        opacity: 0;
-    }
-    100% {
-        top: 4vw;
-        opacity: 1;
-    }
-}
-@keyframes korel {
-    0% {
-        top: 4vw;
-        opacity: 1;
-    }
-    100% {
-        top: 20vw;
-        opacity: 0;
-    }
 }
 
 .poqrKlor {
-    animation-name: poqranal;
-    animation-duration: 2s;
+    transition: 2s;
     width: 35vw;
     height: 35vw;
     top: -10vw;
     left: 8vw;
 }
 .metsKlor {
-    animation-name: metsanal;
-    animation-duration: 2s;
-    width: 55vw;
-    height: 55vw;
-    top: -25vw;
-    left: -2vw;
+    transition: 2s;
+    width: 40vw;
+    height: 40vw;
+    top: -20vw;
+    left: -0vw;
 }
-@keyframes metsanal {
-    0% {
-        width: 35vw;
-        height: 35vw;
-        top: -10vw;
-        left: 8vw;
-    }
-    100% {
-        width: 55vw;
-        height: 55vw;
-        top: -25vw;
-        left: -2vw;
-    }
+.Nike {
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    color: #fff;
 }
-@keyframes poqranal {
-    0% {
-        width: 55vw;
-        height: 55vw;
-        top: -25vw;
-        left: -2vw;
-    }
-    100% {
-        width: 35vw;
-        height: 35vw;
-        top: -10vw;
-        left: 8vw;
-    }
+
+.NikeNerqev {
+    top: 10vw;
+    transition: 2s;
+}
+.NikeVerev {
+    top: 0vw;
+    transition: 2s;
+}
+
+.guyner {
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 0.2vw solid;
+    border-radius: 50%;
+    margin: 0.3vw;
+}
+
+.colorChoos {
+    font-size: 1.7vw;
+    margin: 1vw;
+    /* margin-bottom: 0vw; */
+    display: flex;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit button {
+    border-radius: 5px;
+    padding: 1vw 2vw;
+    font-size: 1.7vw;
 }

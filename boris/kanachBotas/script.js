@@ -1,6 +1,7 @@
 let element = document.getElementsByClassName("img")[0];
 let element2 = document.getElementsByClassName("info")[0];
 let element3 = document.getElementsByClassName("klor")[0];
+let element4 = document.getElementsByClassName("Nike")[0];
 const elem = document.getElementById("image");
 let lists = [
     document.getElementById("li1"),
@@ -11,27 +12,28 @@ let lists = [
 element.classList.add("animacia1");
 element2.classList.add("hiddenBlock");
 element3.classList.add("poqrKlor");
-const wait = (timeout => new Promise(resolve => setTimeout(resolve, timeout)));
+element4.classList.add("NikeNerqev");
 
 elem.addEventListener("mouseover", () => {
-
     element.classList.remove("animacia1");
     element.classList.add("animacia");
     element2.classList.remove("hiddenBlock");
     element2.classList.add("blochNoHidden");
     element3.classList.remove("poqrKlor");
     element3.classList.add("metsKlor");
-    console.log("waiting");
+    element4.classList.remove("NikeNerqev");
+    element4.classList.add("NikeVerev");
 });
 elem.addEventListener("mouseleave", () => {
-
+    
     element.classList.remove("animacia");
     element.classList.add("animacia1");
     element2.classList.remove("blochNoHidden");
     element2.classList.add("hiddenBlock");
     element3.classList.remove("metsKlor");
     element3.classList.add("poqrKlor");
-
+    element4.classList.remove("NikeVerev");
+    element4.classList.add("NikeNerqev");
 });
 let isActivate = false;
 console.log(lists);
@@ -85,3 +87,9 @@ console.log((x * 100) / window.innerWidth);
 console.log((x * 100) / window.innerHeight);
 
 // console.log(a);
+
+// const div = document.getElementById('div1')
+
+// function func() {
+//     div.classList.toggle('div2')
+// }

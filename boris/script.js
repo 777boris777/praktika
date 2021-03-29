@@ -1,48 +1,39 @@
-String.prototype.a = function () {
-    let str = this.toString()
-    console.log(str);
-    let b = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-        b += str[i];
-    }
-    if (str === b) {
-        return true;
-    }
-    return false;
-}
-
-const a2 = str => str === str.split("").reverse().join("")
-
-
-
-let tiv = "546";
-console.log(tiv.a());
-Array.prototype.myMap = function (func) {
-    let arr = []
-    for (let i = 0; i < this.length; i++) {
-        arr = [...arr, func(this[i], i)];
-    }
-    return arr;
-}
+// String.prototype.a = function () {
+//     let str = this.toString()
+//     console.log(str);
+//     let b = "";
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         b += str[i];
+//     }
+//     if (str === b) {
+//         return true;
+//     }
+//     return false;
+// }
+// const a2 = str => str === str.split("").reverse().join("")
+// let tiv = "546";
+// console.log(tiv.a());
+// Array.prototype.myMap = function (func) {
+//     let arr = []
+//     for (let i = 0; i < this.length; i++) {
+//         arr = [...arr, func(this[i], i)];
+//     }
+//     return arr;
+// }
 // console.log(arr.myMap(elem => {
 //     return elem+1;
 // }));
-
-let arr = ["1", "2", "3", "45745", "5225512"];
-Array.prototype.myFilter = function (callback) {
-    for (let i = 0; i < this.length; i++) {
-        // console.log(this[i]);
-        // console.log(callback(this[i]));
-        if (callback(this[i])) {
-            return this[i];
-        }
-    }
-}
-
-console.log(arr.myFilter(word => word.length > 6));
-
-
-
+// let arr = ["1", "2", "3", "45745", "5225512"];
+// Array.prototype.myFilter = function (callback) {
+//     for (let i = 0; i < this.length; i++) {
+//         // console.log(this[i]);
+//         // console.log(callback(this[i]));
+//         if (callback(this[i])) {
+//             return this[i];
+//         }
+//     }
+// }
+// console.log(arr.myFilter(word => word.length > 6));
 // function rekursia(tiv) {
 //     let a = 1;
 //     for (let i = 1; i <= tiv; i++) {
@@ -50,10 +41,7 @@ console.log(arr.myFilter(word => word.length > 6));
 //     }
 //     return a;
 // }
-
 // console.log(rekursia(5));
-
-
 // https://edabit.com/challenge/xPBFGvKQfRFEyy4vx
 // function validName(str) {
 //     let str2 = "",
@@ -78,15 +66,9 @@ console.log(arr.myFilter(word => word.length > 6));
 //     }
 //     console.log(str2);
 // }
-
-
-
 // console.log(validName(prompt("your name")));
-
-
 // let minute = document.getElementById("minute")
 // let second = document.getElementById("second")
-
 // function timer() {
 //     let object = {
 //         minute: 0,
@@ -107,8 +89,6 @@ console.log(arr.myFilter(word => word.length > 6));
 //     }, 1000);
 // }
 // timer();
-
-
 // let age = prompt("qani tarekan es ?", 18);
 // let welcome;
 // if (age > 18) {
@@ -121,41 +101,47 @@ console.log(arr.myFilter(word => word.length > 6));
 //     }
 // }
 // welcome();
-
 // let sum = (a, b) => a + b;
-
-
-
 // let sum2 = (a, b) => {
 //     return a + b;
 // }
-
-
 // let double = n => n * 2;
-
 // let sayHi = () => alert("Hello!");
-
 // alert(sayHi());
-
 // let age = prompt("qani tarekan es ?", 18);
 // const welcome = (age < 18) ?
 //     () => alert("false") :
 //     () => alert("true");
 // welcome();
-
 //const welcome = age => age < 18 ? console.log("false") : console.log("true");
 //let sum =(a,b) => a+b;
 //alert( sum(1, 2) );
 //let double = n => n * 2;
 //alert(double(3));
 //let sayHi = () => alert("Hello!");
-
-
 //alert( sayHi());
-
 // let user = {
 //     name: "boris",
 //     age: 17
 // };
-
 // console.log(user);
+// const user = {
+//     name:"Boris",
+//     age:17
+// }
+// const arr = [1,2,3,4,5]
+// const man = {
+//     sex:'male',
+//     ...user,
+// }
+// const check = (...arr) => {
+//     console.log(arr)
+// }
+// check(1,2,3,4,5,6,7)
+let user = {
+    name: "Иван",
+    age: 30
+};
+for (const key in user) {
+    console.log(key);
+}

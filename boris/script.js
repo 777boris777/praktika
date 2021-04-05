@@ -138,10 +138,33 @@
 //     console.log(arr)
 // }
 // check(1,2,3,4,5,6,7)
+// let user = {
+//     name: "Иван",
+//     age: 30
+// };
+// for (const key in user) {
+//     console.log(key);
+// }
+// let user = {};
+// const stugum = (user) => {
+//     for (let key in user) {
+//         return false;
+//     }
+//     return true;
+// }
+// let a ;
+// console.log(!!a);
+// console.log(stugum(user));
+// let user = { name: "Иван" };
+// let permissions1 = { canView: true };
+// let permissions2 = { canEdit: true };
+// Object.assign(user, permissions1, permissions2);
+// console.log(user, permissions1, permissions2);
 let user = {
-    name: "Иван",
-    age: 30
+    name: "Джон",
+    age: 30,
+    sayHi() {
+        console.log(this.name);
+    }
 };
-for (const key in user) {
-    console.log(key);
-}
+user.sayHi();

@@ -160,11 +160,30 @@
 // let permissions2 = { canEdit: true };
 // Object.assign(user, permissions1, permissions2);
 // console.log(user, permissions1, permissions2);
-let user = {
-    name: "Джон",
-    age: 30,
-    sayHi() {
-        console.log(this.name);
-    }
-};
-user.sayHi();
+// let user = {
+//     name: "Джон",
+//     age: 30,
+//     sayHi() {
+//         console.log(this.name);
+//     }
+// };
+// user.sayHi();
+// let user = null;
+// console.log(user?.address); // undefined
+// console.log(user?.address.street); // undefined
+// let user1 = {
+//     name:"boris",
+//     admin() {
+//         console.log("Я администратор");
+//     }
+// }
+// let user2 = {};
+// user2.admin?.();
+// user1.admin?.(); // Я администратор
+// delete user1?.name
+// console.log();
+// let id1 = Symbol("id");
+// let id2 = id1;
+// console.log(id1.toString());
+// let id = Symbol(41);
+// console.log(id.description === "41"); 

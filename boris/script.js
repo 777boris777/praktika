@@ -187,3 +187,23 @@
 // console.log(id1.toString());
 // let id = Symbol(41);
 // console.log(id.description === "41"); 
+// console.log(this)
+// let user = {
+//     name: "John",
+//     money: 1000,
+//     toString() {
+//         return this.name;
+//     },
+//     valueOf() {
+//         return this.money;
+//     }
+
+// };
+
+// console.log(user); 
+// console.log(user.toString()); // toString -> {name: "John"}
+// console.log(+user); // valueOf -> 1000
+// console.log(user + 500); // valueOf -> 1500
+const number = 7.3e9;
+const numberr = 7.3 * (10 ** 9)
+console.log(number == numberr);

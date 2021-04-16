@@ -11,8 +11,8 @@
 //     return false;
 // }
 // const a2 = str => str === str.split("").reverse().join("")
-// let tiv = "546";
-// console.log(tiv.a());
+// let tiv = "545";
+// console.log(a2(tiv));
 // Array.prototype.myMap = function (func) {
 //     let arr = []
 //     for (let i = 0; i < this.length; i++) {
@@ -160,11 +160,25 @@
 // let permissions2 = { canEdit: true };
 // Object.assign(user, permissions1, permissions2);
 // console.log(user, permissions1, permissions2);
-let user = {
-    name: "Джон",
-    age: 30,
-    sayHi() {
-        console.log(this.name);
+// let user = {
+//     name: "Джон",
+//     age: 30,
+//     sayHi() {
+//         console.log(this.name);
+//     }
+// };
+// user.sayHi();
+
+
+Array.prototype.random = function () {
+    for (let i = 0; i < this.length/2; i++) {
+        let x = Math.floor(Math.random()*this.length) 
+        let y = Math.floor(Math.random()*this.length) 
+        let z = this[x]
+        this[x] = this[y]
+        this[y] = z
     }
-};
-user.sayHi();
+    return this
+}
+let arr = [1,2,3,4,5,6,7,8,9]
+console.log(arr.random())

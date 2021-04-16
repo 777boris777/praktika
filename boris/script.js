@@ -168,8 +168,43 @@
 //     }
 // };
 // user.sayHi();
-
-
+// let user = null;
+// console.log(user?.address); // undefined
+// console.log(user?.address.street); // undefined
+// let user1 = {
+//     name:"boris",
+//     admin() {
+//         console.log("Я администратор");
+//     }
+// }
+// let user2 = {};
+// user2.admin?.();
+// user1.admin?.(); // Я администратор
+// delete user1?.name
+// console.log();
+// let id1 = Symbol("id");
+// let id2 = id1;
+// console.log(id1.toString());
+// let id = Symbol(41);
+// console.log(id.description === "41"); 
+// console.log(this)
+// let user = {
+//     name: "John",
+//     money: 1000,
+//     toString() {
+//         return this.name;
+//     },
+//     valueOf() {
+//         return this.money;
+//     }
+// };
+// console.log(user); 
+// console.log(user.toString()); // toString -> {name: "John"}
+// console.log(+user); // valueOf -> 1000
+// console.log(user + 500); // valueOf -> 1500
+// const number = 7.3e9;
+// const numberr = 7.3 * (10 ** 9)
+// console.log(number == numberr);
 Array.prototype.random = function () {
     for (let i = 0; i < this.length/2; i++) {
         let x = Math.floor(Math.random()*this.length) 

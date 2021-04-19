@@ -204,6 +204,3 @@
 // console.log(user.toString()); // toString -> {name: "John"}
 // console.log(+user); // valueOf -> 1000
 // console.log(user + 500); // valueOf -> 1500
-const number = 7.3e9;
-const numberr = 7.3 * (10 ** 9)
-console.log(number == numberr);

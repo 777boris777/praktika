@@ -235,16 +235,37 @@
 //     console.log(c);
 // }
 // const Upper = (str) => {
-//     console.log(str)
 //     let upper = ''
-//     str.split("").forEach(element => {
-//         chartcode = element.charCodeAt()
+//     for (let i = 0; i < str.length; i++) {
+//         chartcode = str[i].charCodeAt()
 //         if (122 >= chartcode && chartcode >= 97) {
 //             upper += String.fromCharCode((chartcode - 32))
-//         } else/* if (90 >= chartcode && chartcode >= 65) */{
-//             upper += element
-//         }
-//     })
+//             continue
+//         } 
+//         upper += str[i]
+//     }
 //     return upper
 // }
 // console.log(Upper("aF-dfDhj"))
+Array.prototype.MyPush = function (...element) {
+    for (let i = 0; i < element.length; i++) {
+        this[this.length] = element[i]
+    }
+    return this
+}
+Array.prototype.MyPop = function () {
+    this.length = this.length - 1
+    return this;
+
+}
+Array.prototype.MyShift = function (...element) {
+    //grel
+}
+Array.prototype.MyUnshift = function () {
+    //grel
+}
+let arr = [1, 2, 3, 4, 5, 6]
+arr.MyPush(7, 3, 4)
+console.log(arr);
+arr.MyPop()
+console.log(arr);

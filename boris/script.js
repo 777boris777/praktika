@@ -253,19 +253,67 @@ Array.prototype.MyPush = function (...element) {
     }
     return this
 }
-Array.prototype.MyPop = function () {
-    this.length = this.length - 1
-    return this;
+// Array.prototype.MyPop = function () {
+//     this.length = this.length - 1
+//     return this;
+// }
+// Array.prototype.MyShift = function (...element) {
+//     //grel
+// }
+// Array.prototype.MyUnshift = function () {
+//     //grel
+// }
+// let arr = [1, 2, 3, 4, 5, 6]
+// arr.MyPush(7, 3, 4)
+// console.log(arr);
+// arr.MyPop()
+// console.log(arr);
+let arr = [];
+while (arr.length < 200) {
+    arr = [...arr, Math.floor(Math.random() * 100)]
+}
+// let arr = [1, 1, 3, 3, 5, 6, 7, 8, 3, 4, 6, 8, 9, 2, 9, 2, 4, 4, 9]
+
+Array.prototype.MyFind = function (callback) {
+    console.log(this);
+    for (const value of this) {
+        if (callback(value)) {
+            return value
+        }
+    }
+    return null
+}
+Array.prototype.MyFilter = function (callback) {
+    console.log(this);
+    let arr = []
+    for (const value of this) {
+        if (callback(value)) {
+            arr = [...arr, value]
+        }
+    }
+    return arr
+}
+Array.prototype.removeDoublicats = function () {
+    console.log(this);
+    let arr = []
+    for (let key of this) {
+        arr.MyFind(value => value === key) ? null : arr = [...arr, key]
+    }
+    return arr
+}
+Array.prototype.MySort = function () {
+    console.log(this);
+    const array = this
+    if (array.length < 2) {
+        return array
+    }
+    let pivot = array[0]
+    let less = array.MyFilter(array => array < pivot);
+    let greater = array.MyFilter(array => array > pivot);
+    return [...less.MySort(), pivot, ...greater.MySort()]
 
 }
-Array.prototype.MyShift = function (...element) {
-    //grel
-}
-Array.prototype.MyUnshift = function () {
-    //grel
-}
-let arr = [1, 2, 3, 4, 5, 6]
-arr.MyPush(7, 3, 4)
+
 console.log(arr);
-arr.MyPop()
-console.log(arr);
+
+console.log(arr.MySort());

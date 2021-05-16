@@ -247,12 +247,12 @@
 //     return upper
 // }
 // console.log(Upper("aF-dfDhj"))
-Array.prototype.MyPush = function (...element) {
-    for (let i = 0; i < element.length; i++) {
-        this[this.length] = element[i]
-    }
-    return this
-}
+// Array.prototype.MyPush = function (...element) {
+//     for (let i = 0; i < element.length; i++) {
+//         this[this.length] = element[i]
+//     }
+//     return this
+// }
 // Array.prototype.MyPop = function () {
 //     this.length = this.length - 1
 //     return this;
@@ -273,9 +273,7 @@ while (arr.length < 200) {
     arr = [...arr, Math.floor(Math.random() * 100)]
 }
 // let arr = [1, 1, 3, 3, 5, 6, 7, 8, 3, 4, 6, 8, 9, 2, 9, 2, 4, 4, 9]
-
 Array.prototype.MyFind = function (callback) {
-    console.log(this);
     for (const value of this) {
         if (callback(value)) {
             return value
@@ -284,7 +282,6 @@ Array.prototype.MyFind = function (callback) {
     return null
 }
 Array.prototype.MyFilter = function (callback) {
-    console.log(this);
     let arr = []
     for (const value of this) {
         if (callback(value)) {
@@ -294,7 +291,6 @@ Array.prototype.MyFilter = function (callback) {
     return arr
 }
 Array.prototype.removeDoublicats = function () {
-    console.log(this);
     let arr = []
     for (let key of this) {
         arr.MyFind(value => value === key) ? null : arr = [...arr, key]
@@ -302,7 +298,6 @@ Array.prototype.removeDoublicats = function () {
     return arr
 }
 Array.prototype.MySort = function () {
-    console.log(this);
     const array = this
     if (array.length < 2) {
         return array
@@ -311,9 +306,27 @@ Array.prototype.MySort = function () {
     let less = array.MyFilter(array => array < pivot);
     let greater = array.MyFilter(array => array > pivot);
     return [...less.MySort(), pivot, ...greater.MySort()]
-
 }
-
 console.log(arr);
+arr.MySort();
+let x = Math.floor(Math.random() * Math.max.apply(null, arr));
+console.log(x);
+for (let i = 0; i < arr.length; i++) {
+    switch (x) {
+        case arr[i]:
 
-console.log(arr.MySort());
+            break;
+        default:
+            break;
+    }
+}
+let obj = {
+    name: 'boris',
+    hi() {
+        console.log(this.name + ' hi');
+    }, 
+    bye() {
+        console.log(this.name + ' bye');
+    }
+}
+(obj.name ? obj.hi:obj.bye)()

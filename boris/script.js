@@ -268,65 +268,78 @@
 // console.log(arr);
 // arr.MyPop()
 // console.log(arr);
-let arr = [];
-while (arr.length < 200) {
-    arr = [...arr, Math.floor(Math.random() * 100)]
-}
+// let arr = [];
+// while (arr.length < 200) {
+//     arr = [...arr, Math.floor(Math.random() * 100)]
+// }
 // let arr = [1, 1, 3, 3, 5, 6, 7, 8, 3, 4, 6, 8, 9, 2, 9, 2, 4, 4, 9]
-Array.prototype.MyFind = function (callback) {
-    for (const value of this) {
-        if (callback(value)) {
-            return value
-        }
-    }
-    return null
-}
-Array.prototype.MyFilter = function (callback) {
-    let arr = []
-    for (const value of this) {
-        if (callback(value)) {
-            arr = [...arr, value]
-        }
-    }
-    return arr
-}
-Array.prototype.removeDoublicats = function () {
-    let arr = []
-    for (let key of this) {
-        arr.MyFind(value => value === key) ? null : arr = [...arr, key]
-    }
-    return arr
-}
-Array.prototype.MySort = function () {
-    const array = this
-    if (array.length < 2) {
-        return array
-    }
-    let pivot = array[0]
-    let less = array.MyFilter(array => array < pivot);
-    let greater = array.MyFilter(array => array > pivot);
-    return [...less.MySort(), pivot, ...greater.MySort()]
-}
-console.log(arr);
-arr.MySort();
-let x = Math.floor(Math.random() * Math.max.apply(null, arr));
-console.log(x);
-for (let i = 0; i < arr.length; i++) {
-    switch (x) {
-        case arr[i]:
-
-            break;
-        default:
-            break;
-    }
-}
-let obj = {
-    name: 'boris',
-    hi() {
-        console.log(this.name + ' hi');
-    }, 
-    bye() {
-        console.log(this.name + ' bye');
-    }
-}
-(obj.name ? obj.hi:obj.bye)()
+// Array.prototype.MyFind = function (callback) {
+//     for (const value of this) {
+//         if (callback(value)) {
+//             return value
+//         }
+//     }
+//     return null
+// }
+// Array.prototype.MyFilter = function (callback) {
+//     let arr = []
+//     for (const value of this) {
+//         if (callback(value)) {
+//             arr = [...arr, value]
+//         }
+//     }
+//     return arr
+// }
+// Array.prototype.removeDoublicats = function () {
+//     let arr = []
+//     for (let key of this) {
+//         arr.MyFind(value => value === key) ? null : arr = [...arr, key]
+//     }
+//     return arr
+// }
+// Array.prototype.MySort = function () {
+//     const array = this
+//     if (array.length < 2) {
+//         return array
+//     }
+//     let pivot = array[0]
+//     let less = array.MyFilter(array => array < pivot);
+//     let greater = array.MyFilter(array => array > pivot);
+//     return [...less.MySort(), pivot, ...greater.MySort()]
+// }
+// console.log(arr);
+// arr.MySort();
+// let x = Math.floor(Math.random() * Math.max.apply(null, arr));
+// console.log(x);
+// for (let i = 0; i < arr.length; i++) {
+//     switch (x) {
+//         case arr[i]:
+//             break;
+//         default:
+//             break;
+//     }
+// }
+// let obj = {
+//     name: 'boris',
+//     hi() {
+//         console.log(this.name + ' hi');
+//     },
+//     bye() {
+//         console.log(this.name + ' bye');
+//     }
+// }
+// let age = 1;
+// (age < 18) ? console.log("no") : (age == 18) ? console.log("yes") : console.log("chgitem");;
+// switch (age) {
+//     case 1:
+//         console.log(age)
+//         // break;
+//     case 2:
+//         console.log(age +" 1")
+//         break;
+//     case 3:
+//         console.log(age)
+//         break;
+//     default:
+//         console.log('error')
+// }

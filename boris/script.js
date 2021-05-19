@@ -343,3 +343,11 @@
 //     default:
 //         console.log('error')
 // }
+let a = 10
+let s = `
+let a = 11;
+console.log(a+" s");
+`
+eval(s)
+console.log(a+" a");
+// console.log(current.getSeconds());

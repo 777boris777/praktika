@@ -343,11 +343,21 @@
 //     default:
 //         console.log('error')
 // }
-let a = 10
-let s = `
-let a = 11;
-console.log(a+" s");
-`
-eval(s)
-console.log(a+" a");
+// let a = 10
+// let s = `
+// let a = 11;
+// console.log(a+" s");
+// `
+// eval(s)
+// console.log(a+" a");
 // console.log(current.getSeconds());
+for (let i = 0; i < 100; i++) {
+    for (let j = 2; j <= i; j++) {
+        if (i === j) {
+            console.log(i);
+        }
+        if (i % j === 0) {
+            break;
+        }
+    }
+}

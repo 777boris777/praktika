@@ -351,13 +351,25 @@
 // eval(s)
 // console.log(a+" a");
 // console.log(current.getSeconds());
-for (let i = 0; i < 100; i++) {
-    for (let j = 2; j <= i; j++) {
-        if (i === j) {
-            console.log(i);
-        }
+// for (let i = 0; i < 100; i++) {
+//     for (let j = 2; j <= i; j++) {
+//         if (i === j) {
+//             console.log(i);
+//         }
+//         if (i % j === 0) {
+//             break;
+//         }
+//     }
+// }
+
+for (let i = 0; i < 1000; i++) {
+    let r = 0
+    for (let j = 0; j < i; j++) {
         if (i % j === 0) {
-            break;
+            r += j
         }
+    }
+    if (r==i) {
+        console.log(r);
     }
 }

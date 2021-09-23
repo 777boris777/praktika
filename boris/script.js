@@ -373,3 +373,24 @@ for (let i = 0; i < 1000; i++) {
         console.log(r);
     }
 }
+
+const myF = (arg) => {
+    if (isNaN(arg)) {
+        return 0
+    }
+    else {
+        if (arg % 2 == 0) {
+            arg /= 2
+            console.log(arg);
+        }
+        else {
+            arg = arg * 3 + 1
+            console.log(arg);
+        }
+        if (arg <= 1) return 0
+        myF(arg)
+    }
+}
+
+let a = parseInt(prompt("tiv"))
+myF(a)

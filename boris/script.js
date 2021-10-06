@@ -361,36 +361,41 @@
 //         }
 //     }
 // }
-
-for (let i = 0; i < 1000; i++) {
-    let r = 0
-    for (let j = 0; j < i; j++) {
-        if (i % j === 0) {
-            r += j
-        }
-    }
-    if (r==i) {
-        console.log(r);
-    }
+// for (let i = 0; i < 1000; i++) {
+//     let r = 0
+//     for (let j = 0; j < i; j++) {
+//         if (i % j === 0) {
+//             r += j
+//         }
+//     }
+//     if (r==i) {
+//         console.log(r);
+//     }
+// }
+// const myF = (arg) => {
+//     if (isNaN(arg)) {
+//         return 0
+//     }
+//     else {
+//         if (arg % 2 == 0) {
+//             arg /= 2
+//             console.log(arg);
+//         }
+//         else {
+//             arg = arg * 3 + 1
+//             console.log(arg);
+//         }
+//         if (arg <= 1) return 0
+//         myF(arg)
+//     }
+// }
+// let a = parseInt(prompt("tiv"))
+// myF(a)
+function factorial(n) {
+    if (n == 0) 
+        return 1
+    return n * factorial(n - 1)
 }
-
-const myF = (arg) => {
-    if (isNaN(arg)) {
-        return 0
-    }
-    else {
-        if (arg % 2 == 0) {
-            arg /= 2
-            console.log(arg);
-        }
-        else {
-            arg = arg * 3 + 1
-            console.log(arg);
-        }
-        if (arg <= 1) return 0
-        myF(arg)
-    }
-}
-
-let a = parseInt(prompt("tiv"))
-myF(a)
+console.log(
+    factorial(5)
+)

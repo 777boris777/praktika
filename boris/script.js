@@ -399,3 +399,71 @@ function factorial(n) {
 console.log(
     factorial(5)
 )
+document.getElementById("b").addEventListener("click", () => {
+    let divs = document.querySelectorAll(".g, br")
+    for (let i = 0; i < divs.length; i++) {
+        document.body.removeChild(divs[i])
+    }
+    let v = parseInt(document.querySelector(".input").value)
+    for (let i = 0; i < v; i++) {
+        document.body.appendChild(document.createElement("br"))
+        for (let j = 0; j < v; j++) {
+            let elem = document.createElement("div")
+            elem.className = "g"
+            elem.style.height = "50px"
+            elem.style.width = "50px"
+            elem.style.border = "1px solid"
+            elem.style.display = "inline-block"
+            document.body.appendChild(elem)
+        }
+        setInterval(() => {
+            let divs = document.querySelectorAll(".g")
+            for (let i = 0; i < divs.length; i++) {
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+                divs[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+            }
+        }, 1000)
+    }
+})
+
+document.getElementById("a").addEventListener("click", () => {
+    let elem = document.createElement("p")
+    elem.innerHTML = "ka"
+    elem.style.color = "red"
+    document.body.appendChild(elem)
+})
+
+
+document.getElementById("c").addEventListener("click", () => {
+    let divs = document.querySelectorAll(".e, br")
+    for (let i = 0; i < divs.length; i++) {
+        document.body.removeChild(divs[i])
+    }
+    let v = parseInt(document.querySelector(".input").value)
+    for (let i = 0; i < v; i++) {
+        document.body.appendChild(document.createElement("br"))
+        for (let j = 0; j < v; j++) {
+            let elem = document.createElement("div")
+            elem.className = "e"
+            elem.style.height = "50px"
+            elem.style.width = "50px"
+            elem.style.border = "1px solid"
+            elem.style.display = "inline-block"
+            document.body.appendChild(elem)
+        }
+        let j = 0
+        console.log(j);
+        setInterval(() => {
+            let divs = document.querySelectorAll(".e")
+            let r = Math.floor(Math.random() * 256)
+            let g = Math.floor(Math.random() * 256)
+            let b = Math.floor(Math.random() * 256)
+            divs[j].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+            j++
+            console.log(j);
+
+        }, 1000)
+    }
+})

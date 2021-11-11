@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+            .main {
+                width: 854px;
+                height: 480px;
+                background-image: url("https://windows10spotlight.com/wp-content/uploads/2017/08/1a325e33fe933b10cb572715fc51040d.jpg");
+                background-size: cover;
+                margin: auto;
+                border-radius: 10px;
+                /* display: flex; */
+            }
+            .header h1 {
+                color: aliceblue;
+                text-transform: uppercase;
+            }
+            .header {
+                /* background-color: rgba(128, 128, 128, 0.3); */
+                text-align: center;
+            }
+            .footer h4 {
+                color: aliceblue;
+                font-size: 80%;
+            }
+            .footer {
+                /* background-color: rgba(128, 128, 128, 0.3); */
+                text-align: center;
+            }
+            .sing,
+            .log {
+                background-color: rgba(33, 33, 33, 0.7);
+            }
+            .sing form,
+            .log form {
+                margin: 15px;
+            }
+            .forms {
+                justify-content: space-around;
+                display: flex;
+            }
+            .inputs {
+                width: 300px;
+                height: 30px;
+                margin: 7px;
+                background-color: rgba(125, 125, 125, 0.3);
+            }
+            .label,
+            ::placeholder {
+                color: rgba(255, 245, 238, 0.7);
+            }
+            input[type=submit]{
+                color: white;
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <h1>registration / login</h1>
+            </div>
+            <div class="forms">
+                <div class="sing">
+                    <form action="">
+                        <label style="color: #dc8246"
+                            >Registration Form :</label
+                        >
+                        <br />
+                        <input class="inputs" type="text" placeholder="name" />
+                        <br />
+                        <input
+                            class="inputs"
+                            type="email"
+                            placeholder="email"
+                        />
+                        <br />
+                        <input
+                            class="inputs"
+                            type="password"
+                            placeholder="password"
+                        />
+                        <br />
+                        <input
+                            class="inputs"
+                            type="password"
+                            placeholder="confirm password"
+                        />
+                        <br />
+                        <label class="label">
+                            <input type="radio" name="gender" />
+                            Female
+                        </label>
+                        <label class="label">
+                            <input type="radio" name="gender" />
+                            Male
+                        </label>
+                        <br />
+                        <label class="label">
+                            <input type="checkbox" />
+                            i have read and accept terms of use
+                        </label>
+                        <br />
+                        <input class="inputs" type="submit" />
+                    </form>
+                </div>
+                <div class="log">
+                    <form action="">
+                        <label style="color: #dc8246">Login Form :</label>
+                        <br />
+                        <input class="inputs" type="text" placeholder="name" />
+                        <br />
+                        <input
+                            class="inputs"
+                            type="password"
+                            placeholder="password"
+                        />
+                        <br />
+                        <label class="label">
+                            <input type="checkbox" />
+                            remember me
+                        </label>
+                        <br />
+                        <input class="inputs" type="submit" />
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <h4>2021 registration / login form design by Boris</h4>
+            </div>
+        </div>
+    </body>
+</html>

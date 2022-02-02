@@ -257,11 +257,19 @@
 //     this.length = this.length - 1
 //     return this;
 // }
-// Array.prototype.MyShift = function (...element) {
-//     //grel
+// Array.prototype.MyUnshift = function (...element) {
+//     let arr = [...element, ...this]
+//     for (let i = 0; i < arr.length; i++) {
+//         this[i] = arr[i]
+//     }
+//     return this;
 // }
-// Array.prototype.MyUnshift = function () {
-//     //grel
+// Array.prototype.MyShift = function () {
+//     for (let i = 1; i < this.length; i++) {
+//         this[i - 1] = this[i];
+//     }
+//     this.length = this.length - 1
+//     return this;
 // }
 // let arr = [1, 2, 3, 4, 5, 6]
 // arr.MyPush(7, 3, 4)
